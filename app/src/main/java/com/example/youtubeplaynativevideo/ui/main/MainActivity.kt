@@ -1,13 +1,14 @@
 package com.example.youtubeplaynativevideo.ui.main
 
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.example.youtubeplaynativevideo.R
 import com.google.android.youtube.player.YouTubeBaseActivity
 import com.google.android.youtube.player.YouTubeInitializationResult
 import com.google.android.youtube.player.YouTubePlayer
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : YouTubeBaseActivity() {
+class MainActivity : AppCompatActivity() {
 
     lateinit var listener:YouTubePlayer.OnInitializedListener
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,8 +34,6 @@ class MainActivity : YouTubeBaseActivity() {
             }
         }
 
-        play_btn.setOnClickListener {
-            my_youtube_player_view.initialize("AIzaSyB43vfEpUD3NFH5ZV3l1UXcJOZ5aZ7SIZQ",listener)
-        }
+
     }
 }
